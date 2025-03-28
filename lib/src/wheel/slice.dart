@@ -115,6 +115,7 @@ class _CircleSliceLayout extends StatelessWidget {
         onTertiaryTapUp: handler?.onTertiaryTapUp,
         child: ClipPath(
           clipper: _CircleSliceClipper(slice.angle),
+          clipBehavior: Clip.none,
           child: CustomMultiChildLayout(
             delegate: _CircleSliceLayoutDelegate(slice.angle),
             children: [
